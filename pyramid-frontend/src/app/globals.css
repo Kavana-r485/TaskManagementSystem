@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light mode surfaces (matches the off-white sidebar / white content
+     panels seen in the Figma) */
+  --surface: 255 255 255;
+  --surface-muted: 246 246 244;
+
+  /* Default accent = Blue, matching the design's default Color Mode */
+  --accent: 99 91 255;
+  --accent-fg: 255 255 255;
+}
+
+.dark {
+  --surface: 24 24 27;
+  --surface-muted: 39 39 42;
+}
+
+/* Color Mode swatches — applied as a class on <html> alongside .dark/.light */
+.accent-amber { --accent: 217 119 6; }
+.accent-blue { --accent: 99 91 255; }
+.accent-pink { --accent: 219 39 119; }
+.accent-rose { --accent: 225 29 72; }
+.accent-emerald { --accent: 5 150 105; }
+.accent-black { --accent: 23 23 23; }
+
+body {
+  background-color: rgb(var(--surface-muted));
+  color: rgb(15 15 15);
+}
+.dark body {
+  color: rgb(245 245 245);
+}
